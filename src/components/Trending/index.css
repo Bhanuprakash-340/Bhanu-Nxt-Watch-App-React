@@ -1,0 +1,42 @@
+.active-tab-show {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  background-color: #cccccc;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .active-tab-show {
+    padding: 20px;
+    height: 70px;
+  }
+}
+
+.active-icon {
+  color: red;
+  margin-right: 10px;
+}
+
+.active-tab-heading {
+  font-family: 'Roboto';
+  font-size: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .active-tab-heading {
+    font-size: 25px;
+  }
+}
+
+.dark-bar {
+  color: #ffffff;
+  background-color: #212121;
+}
+
+.light-bar {
+  color: #000000;
+  background-color: #cccccc;
+}

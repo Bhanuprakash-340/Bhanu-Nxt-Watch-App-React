@@ -1,0 +1,165 @@
+body {
+  margin: 0px;
+}
+
+.video-items-block-container {
+  width: 100%;
+  /* margin-top: 45px; */
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .video-items-block-container {
+    width: 85%;
+    margin-top: 60px;
+    margin-left: 15%;
+  }
+}
+
+.video {
+  width: 100%;
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .video {
+    margin-top: 10px;
+  }
+}
+
+.video-player {
+  width: 100% !important;
+  height: 50vh !important;
+  padding: 0px !important;
+}
+
+@media screen and (min-width: 768px) {
+  .video-player {
+    height: 70vh !important;
+  }
+}
+
+.video-item-content {
+  width: 100%;
+  padding: 5px;
+}
+
+.title-text-v {
+  font-family: 'Roboto';
+  font-size: 14px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .title-text-v {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.view-pub-at {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .extra-need {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.view-text {
+  font-size: 12px;
+  padding-right: 10px;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .view-text {
+    font-size: 15px;
+  }
+}
+
+.reaction-buttons-container {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .reaction-buttons-container {
+    width: 20%;
+    margin-right: 40px;
+  }
+}
+
+.reaction-button {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  width: 30%;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.sub-name-container {
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+
+@media screen and (min-width: 768px) {
+  .sub-name-container {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+.description {
+  font-family: 'Roboto';
+  font-size: 11px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .description {
+    font-size: 16px;
+    margin-left: 40px;
+  }
+}
+
+.blue-rec {
+  color: #2563eb;
+  border: none;
+}
+
+.normal {
+  color: #64748b;
+  border: none;
+}
