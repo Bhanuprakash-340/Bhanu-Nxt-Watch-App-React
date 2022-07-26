@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import Popup from 'reactjs-popup'
 import Cookies from 'js-cookie'
-import {withRouter} from 'react-router-dom'
+import {withRouter, Link} from 'react-router-dom'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {BsMoon, BsBrightnessHigh} from 'react-icons/bs'
 import {FiLogOut} from 'react-icons/fi'
@@ -34,23 +34,26 @@ class Header extends Component {
             history.replace('/login')
           }
 
-          const onClickLogo = () => {
+          /* const onClickLogo = () => {
             const {history} = this.props
             history.replace('/')
-          }
+          } */
+
           return (
             <div className={`header-extra ${bgColor}`}>
               <div className="nav-bar-logo-container">
                 <button
                   type="button"
                   className="home-logo-button"
-                  onClick={onClickLogo}
+                  //   onClick={onClickLogo}
                 >
-                  <img
-                    src={websiteLogo}
-                    alt="website logo"
-                    className="nav-logo"
-                  />
+                  <Link to="/">
+                    <img
+                      src={websiteLogo}
+                      alt="website logo"
+                      className="nav-logo"
+                    />
+                  </Link>
                 </button>
               </div>
               <div className="nav-items-container">
@@ -79,7 +82,6 @@ class Header extends Component {
                       <button
                         type="button"
                         className={`header-button ${bgColor}`}
-                        modal
                       >
                         <p className={`logout-text ${logoutButton}`}>Logout</p>
                         <FiLogOut className="logout-icon" />

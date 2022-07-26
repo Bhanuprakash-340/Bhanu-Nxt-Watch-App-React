@@ -6,7 +6,7 @@ import VideosView from '../VideosView'
 import Header from '../Header'
 import NavItems from '../NavItems'
 import AppTheme from '../../context/AppTheme'
-import Error from '../Error'
+// import Error from '../Error'
 
 import './index.css'
 
@@ -178,7 +178,44 @@ class Home extends Component {
     )
   }
 
-  renderFailureView = () => <Error />
+  renderFailureView = () => (
+    <AppTheme.Consumer>
+      {value => {
+        const {isDarkTheme} = value
+        const failureImage = isDarkTheme
+          ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-failure-view-dark-theme-img.png'
+          : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-failure-view-light-theme-img.png'
+
+        return (
+          <div className="failure-view-container">
+            <div className="failure-image-container">
+              <img
+                src={failureImage}
+                alt="failure view"
+                className="failure-image"
+              />
+            </div>
+            <div className="failure-content-container">
+              <h1 className="failure-heading">Oops! Something Went Wrong</h1>
+              <p className="failure-description">
+                We are having some trouble to complete your request. Please try
+                again.
+              </p>
+              <div>
+                <button
+                  className="retry-button"
+                  type="button"
+                  onClick={this.onRetry}
+                >
+                  Retry
+                </button>
+              </div>
+            </div>
+          </div>
+        )
+      }}
+    </AppTheme.Consumer>
+  )
 
   renderLoadingView = () => (
     <div className="products-loader-container" data-testid="loader">
@@ -222,7 +259,10 @@ class Home extends Component {
                 </div>
                 <div className="videos-block-container">
                   {bannerShown && this.bannerCard()}
-                  <div className={`display-items-container ${bgColor}`}>
+                  <div
+                    className={`display-items-container ${bgColor}`}
+                    data-testid="banner"
+                  >
                     {this.searchBar()}
                     {this.renderVideoDetails()}
                   </div>
